@@ -216,8 +216,21 @@ print("-------------------------------------------\n"
 #
 # Note: Only the DRIVER should be typing!
 # Write your code below:
+def calculate_ticket_cost(num_seats, price_per_seat):
+    total = num_seats*price_per_seat
+    return total
 
+def apply_discount(total, discount_percent):
+    new_total = total-(total*(discount_percent/100))
+    return new_total
 
+def display_price(price):
+    print(f"Total cost: £{price}")
+
+seats = 3
+cost = calculate_ticket_cost(seats, 12)
+final_cost = apply_discount(cost, 10)
+display_price(final_cost)
 
 
 # -------------------------------------------

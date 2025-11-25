@@ -82,10 +82,22 @@ print("-------------------------------------------\n"
 #
 # Note: Only the DRIVER should be typing!
 # Write your code below:
+def print_welcome(name):
+    print(f"Welcome to the cinema booking system:{name}!")
+    
+print_welcome("Sarah")
 
+def print_movie_info(title, duration):
+    print(f"Movie: {title}")
+    print(f"Duration: {duration} minutes")
+print_movie_info("matrix", "136")
 
-
-
+def print_booking_summary(name, movie, seats):
+    print(f"""==== Booking summary ====
+        Custumer: {name}
+        Movie: {movie}
+        Seats: {seats}""")
+print_booking_summary("Sarah", "Matrix", "2")
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)
 # -------------------------------------------
@@ -135,9 +147,19 @@ print("-------------------------------------------\n"
 # Note: Only the DRIVER should be typing!
 # Write your code below:
 
+def get_customer_name():
+    name = input("Enter your name\n")
+    return name
+def get_movie_title():
+    movie = input("Enter movie name\n")
+    return movie
+def get_number_of_seats():
+    seat = int(input("How many seats?\n"))
+    return seat
 
-
-
+customer = get_customer_name()
+movie = get_movie_title()
+seats = get_number_of_seats()
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)
 # -------------------------------------------

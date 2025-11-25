@@ -160,6 +160,10 @@ def get_number_of_seats():
 customer = get_customer_name()
 movie = get_movie_title()
 seats = get_number_of_seats()
+
+
+
+
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)
 # -------------------------------------------

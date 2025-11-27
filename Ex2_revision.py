@@ -286,10 +286,30 @@ print("-------------------------------------------\n"
 #
 # Note: Only the DRIVER should be typing!
 # Write your code below:
+def create_booking(customer_name, movie_title, num_seats, total_cost):
+    booking = {
+        "customer":customer_name,
+        "movie": movie_title,
+        "seats":num_seats,
+        "cost":total_cost
+    }
+    return booking
+
+def display_booking(booking):
+    print(f"customer: {booking["customer"]}")
+    print(f"movie: {booking["movie"]}")
+    print(f"seats: {booking["seats"]}")
+    print(f"cost: {booking["cost"]}")
 
 
+get_customer_name()
+get_movie_title()
+get_number_of_seats()
 
+calculate_ticket_cost(seats, 12)
 
+create_booking(customer, movie, seats, cost)
+display_booking("booking")
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)
 # -------------------------------------------

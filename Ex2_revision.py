@@ -288,7 +288,7 @@ print("-------------------------------------------\n"
 # Write your code below:
 def create_booking(customer_name, movie_title, num_seats, total_cost):
     booking = {
-        "customer":customer_name,
+        "customer": customer_name,
         "movie": movie_title,
         "seats":num_seats,
         "cost":total_cost
@@ -308,8 +308,8 @@ get_number_of_seats()
 
 calculate_ticket_cost(seats, 12)
 
-create_booking(customer, movie, seats, cost)
-display_booking("booking")
+booking = create_booking(customer, movie, seats, cost)
+display_booking(booking)
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)
 # -------------------------------------------
@@ -353,9 +353,19 @@ print("-------------------------------------------\n"
 #
 # Note: Only the DRIVER should be typing!
 # Write your code below:
+bookings=[]
+
+def add_booking(customer_name, movie_title, seats):
+    customer = get_customer_name()
+    movie = get_movie_title()
+    seats = get_number_of_seats()
 
 
+add_booking(customer, movie, seats)
 
+calculate_ticket_cost(seats, 12)
+
+create_booking(customer, movie, seats, cost)
 
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)

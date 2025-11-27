@@ -82,10 +82,22 @@ print("-------------------------------------------\n"
 #
 # Note: Only the DRIVER should be typing!
 # Write your code below:
+def print_welcome(name):
+    print(f"Welcome to the cinema booking system:{name}!")
+    
+print_welcome("Sarah")
 
+def print_movie_info(title, duration):
+    print(f"Movie: {title}")
+    print(f"Duration: {duration} minutes")
+print_movie_info("matrix", "136")
 
-
-
+def print_booking_summary(name, movie, seats):
+    print(f"""==== Booking summary ====
+        Custumer: {name}
+        Movie: {movie}
+        Seats: {seats}""")
+print_booking_summary("Sarah", "Matrix", "2")
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)
 # -------------------------------------------
@@ -134,6 +146,20 @@ print("-------------------------------------------\n"
 #
 # Note: Only the DRIVER should be typing!
 # Write your code below:
+
+def get_customer_name():
+    name = input("Enter your name\n")
+    return name
+def get_movie_title():
+    movie = input("Enter movie name\n")
+    return movie
+def get_number_of_seats():
+    seat = int(input("How many seats?\n"))
+    return seat
+
+customer = get_customer_name()
+movie = get_movie_title()
+seats = get_number_of_seats()
 
 
 
@@ -190,8 +216,21 @@ print("-------------------------------------------\n"
 #
 # Note: Only the DRIVER should be typing!
 # Write your code below:
+def calculate_ticket_cost(num_seats, price_per_seat):
+    total = num_seats*price_per_seat
+    return total
 
+def apply_discount(total, discount_percent):
+    new_total = total-(total*(discount_percent/100))
+    return new_total
 
+def display_price(price):
+    print(f"Total cost: £{price}")
+
+seats = 3
+cost = calculate_ticket_cost(seats, 12)
+final_cost = apply_discount(cost, 10)
+display_price(final_cost)
 
 
 # -------------------------------------------
@@ -247,10 +286,30 @@ print("-------------------------------------------\n"
 #
 # Note: Only the DRIVER should be typing!
 # Write your code below:
+def create_booking(customer_name, movie_title, num_seats, total_cost):
+    booking = {
+        "customer": customer_name,
+        "movie": movie_title,
+        "seats":num_seats,
+        "cost":total_cost
+    }
+    return booking
+
+def display_booking(booking):
+    print(f"customer: {booking["customer"]}")
+    print(f"movie: {booking["movie"]}")
+    print(f"seats: {booking["seats"]}")
+    print(f"cost: {booking["cost"]}")
 
 
+get_customer_name()
+get_movie_title()
+get_number_of_seats()
 
+calculate_ticket_cost(seats, 12)
 
+booking = create_booking(customer, movie, seats, cost)
+display_booking(booking)
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)
 # -------------------------------------------
@@ -294,9 +353,19 @@ print("-------------------------------------------\n"
 #
 # Note: Only the DRIVER should be typing!
 # Write your code below:
+bookings=[]
+
+def add_booking(customer_name, movie_title, seats):
+    customer = get_customer_name()
+    movie = get_movie_title()
+    seats = get_number_of_seats()
 
 
+add_booking(customer, movie, seats)
 
+calculate_ticket_cost(seats, 12)
+
+create_booking(customer, movie, seats, cost)
 
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)
